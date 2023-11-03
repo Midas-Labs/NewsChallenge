@@ -1,6 +1,86 @@
-<img alt="React Native Typescript Boilerplate" src="assets/logo.png" width="1050"/>
 
-[![A lot of fundamental features with Typescript support React Native Boilerplate](https://img.shields.io/badge/-A%20lot%20of%20fundamental%20features%20with%20Typescript%20support%20React%20Native%20Boilerplate-orange?style=for-the-badge)](https://github.com/WrathChaos/react-native-typescript-boilerplate)
+# React Native Authentication and News App Challenge
+
+## Background
+Create a simple news application using React Native that fetches news articles from a public API. The app will require users to sign in to view the articles and should handle different states like loading, success, and error.
+
+## Requirements
+
+### 1. Setup
+- Initialize a new React Native project using React Native CLI.
+- Use functional components with React hooks.
+
+### 2. Authentication
+- Integrate user authentication with Auth0 or Clerk.(Create a free account)
+- Users should be able to sign up, sign in, and sign out.
+- Ensure the news feed is only accessible to authenticated users.
+
+### 3. API Integration
+- Use any free news API, such as [NewsAPI](https://newsapi.org/), to fetch top headlines.
+- Fetch top headlines after a user has successfully signed in.
+
+### 4. Error Handling
+- Implement error handling for the authentication process and API requests.
+- Display user-friendly error messages for different errors.
+- Include a retry mechanism for failed API requests.
+
+### 5. State Management
+- Manage the application's state for loading, success, error, and authentication status.
+
+### 6. UI/UX
+- Create a login/sign-up screen with input validation.
+- Display an activity indicator during loading states.
+- Render the list of articles with their title, description, and thumbnail.
+
+### 7. Bonus Features
+- Implement infinite scroll for the news feed.
+- Allow users to filter articles by categories.
+- Add biometric authentication as a second factor after sign-in.
+
+### 8. Testing
+- Write Jest unit tests for the authentication process, ensuring that the user can sign up, sign in, and sign out.
+- Write Jest unit tests for API calls, ensuring that articles are fetched correctly, and that the error handling logic is triggered when the API call fails.
+- Ensure tests cover the retry mechanism and state changes throughout the application.
+
+## Deliverables
+- Source code in a GitHub repository.
+- README documentation on setup, third-party libraries, and running tests.
+- Video or GIF of the app's functionality, including authentication and error handling.
+- A test suite with sufficient coverage for the authentication and API integration parts of the app.
+
+## Evaluation Criteria
+- Correctness of functionality.
+- Code quality and organization.
+- Seamless integration of authentication.
+- Graceful error handling.
+- Efficient state management.
+- Smooth and intuitive user experience.
+- Test coverage and successful test execution.
+
+## Additional Instructions
+- Use JavaScript ES6+ syntax.
+- Use Context API or another state management library/tool.
+- Implement navigation with React Navigation.
+- Follow setup instructions for Auth0 or Clerk.
+- Write tests for authentication flow and API calls with Jest.
+
+## For A Sample Task Board 
+Here is a list of the sample tasks provided, feel free to modify them as needed. Make sure that all the tasks are being tracked using github issues.
+| Ticket # | Summary                                           | Issue Type | Description                                                                                                                                          | Acceptance Criteria                                                                                                                                                                                           |
+|----------|---------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1        | Project Setup and Configuration                   | Task       | The developer needs to create a new React Native project, ensuring all necessary tools and dependencies are properly installed and configured.        | - Project initializes without errors.<br>- A `README.md` file is created with setup instructions.                                                                                                             |
+| 2        | Integrate Auth0/Clerk for Authentication          | Task       | Integrate Auth0 or Clerk for user authentication, enabling users to sign up, sign in, and sign out.                                                  | - Auth0/Clerk is properly configured in the app.<br>- Users can sign up, sign in, and sign out.<br>- Authentication state is managed correctly.                                                                |
+| 3        | API Integration for Fetching News                 | Task       | Integrate a news API service to fetch top headlines, available only to authenticated users.                                                          | - The News API integration functions correctly.<br>- Only authenticated users can fetch news articles.<br>- The fetched data should include the article's title, description, and image if available.         |
+| 4        | Implement Error Handling Mechanisms               | Task       | Develop a robust error handling system for both the authentication flow and the news API requests.                                                   | - Error messages are user-friendly.<br>- There is a retry option for failed API requests.<br>- Authentication errors are handled gracefully.                                                                  |
+| 5        | Implement State Management                        | Task       | Implement state management to handle loading, success, error, and authentication status.                                                             | - Appropriate use of state management patterns.<br>- The UI reflects the different states accurately.<br>- The app remains responsive during state transitions.                                               |
+| 6        | Develop the UI/UX for Authentication             | Task       | Create UI components for the login and sign-up screens, including input validation and feedback.                                                     | - Screens for login and signup are created.<br>- Input validation works and provides feedback.<br>- A logout option is accessible and functional.                                                              |
+| 7        | Develop the UI/UX for News Feed                   | Task       | Develop the UI for displaying news articles with an activity indicator during loading states and the ability to pull-to-refresh.                     | - News articles are displayed in a list.<br>- An activity indicator is shown during loading.<br>- Pull-to-refresh functionality is implemented.                                                               |
+| 8        | Implement Additional Features                     | Task       | Add infinite scroll for the news feed and allow users to filter articles by categories.                                                              | - Infinite scroll loads more articles as the user scrolls down.<br>- Users can filter articles by selected categories.                                                                                        |
+| 9        | Add Biometric Authentication                      | Task       | Implement biometric authentication as a second factor after the user has signed in.                                                                  | - Biometric authentication is prompted after the initial sign-in.<br>- The feature works on supported devices.                                                                                                |
+| 10       | Write Unit Tests Using Jest                       | Task       | Create a suite of unit tests for the authentication flow and the API calls to ensure they function as expected.                                      | - Tests cover critical authentication functionality.<br>- Tests cover API call success and failure cases.<br>- All tests pass with clear documentation on how to run them.                                     |
+
+https://docs.google.com/spreadsheets/d/1fNAJZRa1lGDPZg3viFOCPYkUMPkKrvLx-UyBTVLsaZE/edit?usp=sharing
+
 
 [![npm version](https://img.shields.io/npm/v/react-native-typescript-boilerplate.svg?style=for-the-badge)](https://www.npmjs.com/package/@freakycoder/react-native-typescript-boilerplate)
 [![npm](https://img.shields.io/npm/dt/react-native-typescript-boilerplate.svg?style=for-the-badge)](https://www.npmjs.com/package/@freakycoder/react-native-typescript-boilerplate)
@@ -8,12 +88,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=for-the-badge)](https://github.com/prettier/prettier)
 
-<p align="center">
-  <img alt="React Native Typescript Boilerplate"
-        src="assets/react-native-typescript-boilerplate.gif" height="650" width="325" />
-</p>
 
-# 🥳 Version 3.5 is here 😍
 
 We're proudly announce that `Version 3.5` is here!
 
@@ -77,9 +152,6 @@ We're proudly announce that `Version 3.5` is here!
 
 To create a new project using the barebone boilerplate:
 
-```sh
-git clone https://github.com/WrathChaos/react-native-typescript-boilerplate.git my-app-name
-```
 
 # 🎯 Step By Step Guide
 
@@ -165,39 +237,6 @@ sdk.dir=/Users/username/Library/Android/sdk
 - [Axios Hooks](./docs/axios-hooks.md)
 - [Event Emitter Usage](./docs/event-emitter.md)
 - [Project Structure](./docs/project-structure.md)
-
-# 🔮 Roadmap
-
-- [x] ~~LICENSE~~
-- [x] ~~Better Husky: Linter, Prettier and Commintlint~~
-- [x] ~~Removal of `react-native-animated-splash-screen`~~
-- [x] ~~New Theme Support with React Navigation~~
-- [x] ~~Implement the native splash screen with [react-native-splash-screen](https://github.com/crazycodeboy/react-native-splash-screen)~~
-- [x] ~~Better and separated documentation~~
-- [x] ~~Axios Hooks~~
-- [x] ~~React Native New Architecture~~
-- [ ] `Babel Plugin Module Resolver` Documentation with Example
-- [ ] `Navigation Service` Documentation with Example
-- [ ] `Localization` Documentation with Example
-- [ ] `Theme` Documentation with Example
-- [ ] `FAQ` Documentation
-- [ ] `Website` for the boilerplate
-- [ ] Splash Screen Documentation
-- [ ] `Detox E2E` Integration Fork Version
-- [ ] `Redux` Fork Version
-- [ ] `MobX State Tree` Fork Version
-- [ ] Write an article about the lib on `Medium`
-- [ ] Write an article about the lib on `DevTo`
-
-## Credits
-
-<span>Photo by <a href="https://unsplash.com/@sotti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shifaaz shamoon</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
-
-<span>Photo by <a href="https://unsplash.com/@jamie452?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jamie Street</a> on <a href="https://unsplash.com/s/photos/profile-picture?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
-
-## Author
-
-FreakyCoder, kurayogun@gmail.com
 
 ## License
 
